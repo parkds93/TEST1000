@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.25">
+<title>EQM-Rental 시스템</title>
+	
+	<link th:href="@{/common/bootstrap/css/bootstrap.css}" rel="stylesheet">
+	
+	 <script th:src="@{/common/jquery/jquery-3.2.1.min.js}"></script>
+	 <script th:src="@{/common/bootstrap/js/popper.min.js}"></script>
+	 <script th:src="@{/common/bootstrap/js/bootstrap.js}"></script>
+	 <script th:src="@{/common/js/include/nav.js}"></script>
+	
+	<th:block layout:fragment="script"></th:block>
+	<th:block layout:fragment="css"></th:block>
+</head>
+<body>
+<div style="display: flex;">
+	<div th:replace="include/nav::nav"></div>
+	<div style="width: 100vw; height: 100%;">
+		<div th:replace="include/header::header"></div>
+		<div layout:fragment="content"></div>
+		<div th:replace="include/footer::footer"></div>
+	</div>
+</div>	
+</body>
+</html>
